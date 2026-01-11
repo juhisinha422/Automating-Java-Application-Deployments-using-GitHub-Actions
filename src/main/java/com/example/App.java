@@ -933,7 +933,7 @@ public class App {
         </div>
         
         <div class="copyright">
-            <p>© 2025 Learn With Kastro. All rights reserved.</p>
+            <p>© 2026 Learn With Kastro. All rights reserved.</p>
             <p style="margin-top: 10px; font-size: 0.95rem;">
                 Transform Your DevOps Career with Expert-Led Training
             </p>

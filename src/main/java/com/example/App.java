@@ -17,7 +17,7 @@ public class App {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn With Kastro | GitHub Actions + Kubernetes Masterclass</title>
+    <title>Learning DevOps with Project | GitHub Actions + Kubernetes Masterclass</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { 
@@ -719,7 +719,7 @@ public class App {
         
         <!-- Announcement Badge -->
         <div class="batch-announcement">
-            🎉 Announcing New Batch On
+            🎉 Welcome to the DevOps Project
         </div>
         
         <div class="main-icons">
@@ -748,36 +748,36 @@ public class App {
                     <i class="fas fa-calendar-star"></i>
                 </div>
                 <div class="date-content">
-                    <span class="date-label">🚀 Training Starts From</span>
-                    <div class="date-main">29 January 2026</div>
+                    <span class="date-label">🚀 DevOps Cool</span>
+                    <div class="date-main">31 January 2026</div>
                 </div>
             </div>
         </div>
     </section>
 
     <div class="container">
-        <!-- Training Highlights -->
+        <!-- Skills Used -->
         <section class="section" id="highlights">
-            <h2 class="section-title">⭐ Training Highlights</h2>
+            <h2 class="section-title">⭐ Tools Used</h2>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
-                    <div class="stat-number">35-40</div>
-                    <p>Days Live Training</p>
+                    <div class="stat-number">80%</div>
+                    <p>Github Actions</p>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon"><i class="fas fa-tools"></i></div>
-                    <div class="stat-number">5+</div>
-                    <p>Major Tools Covered</p>
+                    <div class="stat-number">80%</div>
+                    <p>Docker</p>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-                    <div class="stat-number">5</div>
+                    <div class="stat-number">1</div>
                     <p>Hands-on Projects</p>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="stat-number">2</div>
+                    <div class="stat-number">1</div>
                     <p>Capstone Projects</p>
                 </div>
             </div>
@@ -836,7 +836,7 @@ public class App {
                     <div class="card-icon">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3>Who Should Join This Training?</h3>
+                    <h3>Who Should do this Project?</h3>
                 </div>
                 <ul>
                     <li><span class="highlight">DevOps Engineers</span> looking to master cloud-native technologies</li>

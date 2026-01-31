@@ -57,6 +57,11 @@ The objective of this project is to:
 
 ---
 
+## Project Architecture 
+
+<img width="1130" height="617" alt="Screenshot 2026-01-31 215752" src="https://github.com/user-attachments/assets/a5984519-30bc-421b-bbe0-494d795ab625" />
+
+
 ## 🔄 CI/CD Workflow
 
 ### 1️⃣ Trigger

@@ -60,7 +60,7 @@ The objective of this project is to:
 ## 🔄 CI/CD Workflow
 
 ### 1️⃣ Trigger
-The pipeline is triggered automatically on every push to the `main` branch.
+The pipeline is triggered automatically on every push to the `master` branch.
 
 ---
 

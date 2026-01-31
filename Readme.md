@@ -117,6 +117,7 @@ $ docker images (You can see images are up and running)
 
 ## Access the Application
 Enable Port no. : 8080 (in security group)
+
 Access the App: EC2_Host_IP:8080
 
 ## ▶️ Run the Project Locally

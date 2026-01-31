@@ -1,97 +1,145 @@
-# 🚀 Announcing GitHub Actions + Kubernetes Course
+# 🚀 Automating Java Application Deployments using GitHub Actions
 
-![GitHub Actions Course Banner](./GitHub%20Actions%20Course.png)
+This project demonstrates how to automate the **build and deployment of a Java application** using **GitHub Actions**.  
+It showcases a real-world **CI/CD pipeline** where application code is built, tested, and deployed automatically to a remote Linux server using **SSH and Docker**.
 
-> Master GitHub Actions by building real-world CI/CD pipelines for modern applications.
-
----
-
-## 📌 Course Overview
-
-This course is a hands-on, practical guide to **Continuous Integration and Continuous Deployment (CI/CD)** using **GitHub Actions** and **Kubernetes**. You will learn how to automate builds, tests, security scans, Docker workflows, and cloud deployments using industry best practices.
+This repository is suitable for **learning DevOps**, **hands-on practice**, and **interview demonstrations**.
 
 ---
 
-## 📝 Registration & Schedule Details
+## 🧠 Project Overview
 
-- 📌 **Registration Form:**  
-  https://forms.gle/eNq1RCrJzDRdCFov6
-
-- 🧪 **Demo Classes:** 29 & 30 January, 2026  
-- ⏰ **Session Timings:** 5:00 – 6:30 PM IST  
-- 📆 **Duration:** 40 Days (Monday – Friday)  
-- 💰 **Fee:** ₹7000
+The objective of this project is to:
+- Automate Java application builds using **Maven**
+- Implement **CI/CD pipelines** using GitHub Actions
+- Deploy the application to a remote server via **SSH**
+- Run deployment commands using **Docker**
 
 ---
 
-## 💬 Join Our DevOps WhatsApp Community
+## 🛠️ Tools & Technologies
 
-Stay updated with course announcements, demo class reminders, learning resources, and DevOps discussions.
+| Tool | Purpose |
 
-👉 **Join here:**  
-https://chat.whatsapp.com/EGw6ZlwUHZc82cA0vXFnwm
+|-----|--------|
 
----
+| Java | Application development |
 
-## ⚙️ GitHub Actions Mastery
+| Maven | Build and dependency management |
 
-You will gain deep expertise in building enterprise-grade CI/CD systems using GitHub Actions:
+| GitHub Actions | CI/CD automation |
 
-- Complete CI/CD Pipeline Design
-- Hosted & Self-Hosted Runners
-- Advanced Security & Secrets Management
-- Docker Image Build & Push Pipelines
-- Multi-Stage & Matrix Workflows
-- Automated Versioning & Releases
-- Custom GitHub Actions Development
-- Enterprise Best Practices
+| Docker | Application containerization |
+
+| SSH | Secure remote access |
+
+| appleboy/ssh-action | SSH-based deployment in GitHub Actions |
 
 ---
 
-## ☸️ Kubernetes Mastery
+## 📁 Project Structure
 
-Learn production-ready Kubernetes from fundamentals to advanced real-world deployments:
+.
+├── .github/
 
-- Kubernetes Architecture Deep Dive
-- Pods, Deployments & Services
-- Advanced Networking & Ingress
-- Helm Charts & Package Management
-- AWS EKS Deployment & Management
-- GitOps with ArgoCD
-- Monitoring with Prometheus & Grafana
-- Service Mesh with Istio
-- Production Security & RBAC
+│ └── workflows/
 
----
+│ └── deploy.yml # GitHub Actions workflow
 
-## 🎯 Who Should Join?
+├── src/ # Java source code
 
-- DevOps Engineers
-- Backend Developers
-- Cloud Engineers
-- Final-year Students
-- Working Professionals transitioning to DevOps
-- Anyone serious about CI/CD & Kubernetes in production
+├── Dockerfile # Docker build instructions
+
+├── pom.xml # Maven configuration
+
+└── README.md # Project documentation
+
 
 ---
 
-## ⭐ Why This Course?
+## 🔄 CI/CD Workflow
 
-- 100% practical & project-based
-- Real-world CI/CD architectures
-- Industry-aligned curriculum
-- Live instructor-led sessions
-- Production deployment scenarios
-- Career-focused guidance
+### 1️⃣ Trigger
+The pipeline is triggered automatically on every push to the `main` branch.
 
 ---
 
-## 🧑‍💻 Instructor
+### 2️⃣ Continuous Integration (CI)
+- Code is checked out from the repository
+- Java environment is set up
+- Maven builds the project and runs tests
 
-**Kastro**  
-Cloud & Kubernetes Trainer
+This ensures only valid and tested code proceeds to deployment.
 
 ---
 
-🔥 *Build. Automate. Deploy. Scale.*  
-Welcome to your DevOps transformation journey.
+### 3️⃣ Continuous Deployment (CD)
+- GitHub Actions connects to a remote server via SSH
+- Deployment commands are executed remotely
+- Docker is used to run the Java application on the server
+
+---
+
+## 🔐 GitHub Secrets Configuration
+
+The following secrets must be added in your repository:
+
+**Settings → Secrets and variables → Actions**
+
+| Secret Name | Description |
+|------------|------------|
+| `EC2_HOST` | Public IP or DNS of the server |
+| `EC2_USER` | SSH username (e.g., ubuntu) |
+| `EC2_SSH_KEY` | Private SSH key |
+
+These secrets are securely used during deployment.
+
+---
+
+## 📦 Example Deployment Step
+
+```yaml
+- name: Deploy to Server
+  uses: appleboy/ssh-action@v1.1.0
+  with:
+    host: ${{ secrets.EC2_HOST }}
+    username: ${{ secrets.EC2_USER }}
+    key: ${{ secrets.EC2_SSH_KEY }}
+    script: |
+      docker pull my-java-app:latest
+      docker stop java-app || true
+      docker rm java-app || true
+      docker run -d -p 8080:8080 my-java-app:latest
+```
+
+## ▶️ Run the Project Locally
+
+```bash
+git clone https://github.com/juhisinha422/Automating-Java-Application-Deployments-using-GitHub-Actions.git
+cd Automating-Java-Application-Deployments-using-GitHub-Actions
+mvn clean install
+```
+
+## 🎯 Key Learnings
+
+CI/CD pipeline implementation using GitHub Actions
+
+Secure SSH-based deployments
+
+Dockerized Java application deployment
+
+Real-world DevOps workflow experience
+
+## 📌 Notes
+
+Ensure Docker is installed on the deployment server
+
+The SSH user must have Docker permissions
+
+Do not hard-code credentials in workflow files
+
+## 👩‍💻 Author
+
+Juhi Sinha
+DevOps | Cloud | CI/CD Automation
+

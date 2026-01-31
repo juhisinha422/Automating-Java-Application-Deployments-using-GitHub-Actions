@@ -772,13 +772,13 @@ public class App {
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-                    <div class="stat-number">1</div>
-                    <p>Hands-on Projects</p>
+                    <div class="stat-number">80%</div>
+                    <p>Maven</p>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                    <div class="stat-number">1</div>
-                    <p>Capstone Projects</p>
+                    <div class="stat-number">80%</div>
+                    <p>JAVA</p>
                 </div>
             </div>
         </section>

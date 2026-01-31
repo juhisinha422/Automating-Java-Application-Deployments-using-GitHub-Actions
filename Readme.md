@@ -151,3 +151,5 @@ Do not hard-code credentials in workflow files
 Juhi Sinha
 DevOps | Cloud | CI/CD Automation
 
+<img width="1891" height="860" alt="Image" src="https://github.com/user-attachments/assets/b306565c-ca5f-4cae-b612-1a5e6732fb81" />
+

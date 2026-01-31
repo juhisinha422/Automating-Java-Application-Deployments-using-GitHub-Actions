@@ -111,6 +111,13 @@ These secrets are securely used during deployment.
       docker rm java-app || true
       docker run -d -p 8080:8080 my-java-app:latest
 ```
+## Docker images (in server)
+
+$ docker images (You can see images are up and running)
+
+## Access the Application
+Enable Port no. : 8080 (in security group)
+Access the App: EC2_Host_IP:8080
 
 ## ▶️ Run the Project Locally
 
